@@ -1,0 +1,25 @@
+PODS:
+  - Nimble (5.1.1)
+  - PersistentStorageSerializable (1.1.0):
+    - Reflection (~> 0.14)
+  - Quick (1.0.0)
+  - Reflection (0.14.3)
+
+DEPENDENCIES:
+  - Nimble (~> 5.1.1)
+  - PersistentStorageSerializable (from `../`)
+  - Quick (~> 1.0.0)
+
+EXTERNAL SOURCES:
+  PersistentStorageSerializable:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
+  PersistentStorageSerializable: d941980a136f85a546b3378c6228526ad4fd7d51
+  Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
+  Reflection: 93327e50981227ac33c18274fcbaed33b1127811
+
+PODFILE CHECKSUM: 1725b222e0b97edb7fa20facee56f57f70eaa39d
+
+COCOAPODS: 1.1.1

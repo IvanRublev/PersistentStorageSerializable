@@ -1,0 +1,6 @@
+framework module Reflection {
+  umbrella header "Reflection-OSX-umbrella.h"
+
+  export *
+  module * { export * }
+}

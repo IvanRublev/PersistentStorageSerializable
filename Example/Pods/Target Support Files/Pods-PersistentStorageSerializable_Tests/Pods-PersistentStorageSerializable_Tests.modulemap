@@ -1,0 +1,6 @@
+framework module Pods_PersistentStorageSerializable_Tests {
+  umbrella header "Pods-PersistentStorageSerializable_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,12 +1,18 @@
 use_frameworks!
 
-target 'PersistentStorageSerializable_Example' do
+target 'PersistentStorageSerializable_iOSExample' do
+  platform :ios, '9.0'
   pod 'PersistentStorageSerializable', :path => '../'
+end
 
-  target 'PersistentStorageSerializable_Tests' do
-    inherit! :search_paths
-
+target 'PersistentStorageSerializable_Tests' do
+    platform :ios, '9.0'
+    pod 'PersistentStorageSerializable', :path => '../'
     pod 'Quick', '~> 1.0.0'
-  pod 'Nimble', '~> 5.1.1'
-  end
+    pod 'Nimble', '~> 5.1.1'
+end
+
+target 'PersistentStorageSerializable_MacExample' do
+    platform :osx, '10.11'
+    pod 'PersistentStorageSerializable', :path => '../'
 end

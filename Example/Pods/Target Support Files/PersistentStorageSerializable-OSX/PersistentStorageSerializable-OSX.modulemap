@@ -1,0 +1,6 @@
+framework module PersistentStorageSerializable {
+  umbrella header "PersistentStorageSerializable-OSX-umbrella.h"
+
+  export *
+  module * { export * }
+}

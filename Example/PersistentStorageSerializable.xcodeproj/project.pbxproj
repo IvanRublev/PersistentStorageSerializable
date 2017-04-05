@@ -12,23 +12,27 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		607FACEC1AFB9204008FA782 /* PersistentStorageSerializableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* PersistentStorageSerializableTests.swift */; };
+		80E924A82C6F4D136EF6DAFB /* Pods_PersistentStorageSerializable_iOSExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095426B6186FB283A8442B6E /* Pods_PersistentStorageSerializable_iOSExample.framework */; };
 		98D5D52F222783CA20C2F8FD /* Pods_PersistentStorageSerializable_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6F0D1E550D38F1ACE0CFCF6 /* Pods_PersistentStorageSerializable_Tests.framework */; };
-		FF3A98CAC234010A627E2640 /* Pods_PersistentStorageSerializable_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD1FD87DE55419C4E017214 /* Pods_PersistentStorageSerializable_Example.framework */; };
+		AB2E65E91E97E506009A8531 /* Car.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB2E65E81E97E506009A8531 /* Car.plist */; };
+		AB6AC3AF1E950D5300F735CB /* PersistentStorageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6AC3AD1E950C5E00F735CB /* PersistentStorageMock.swift */; };
+		AB6AC3B61E95513E00F735CB /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6AC3B51E95513E00F735CB /* Settings.swift */; };
+		AB6AC3C01E9680AE00F735CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6AC3BF1E9680AE00F735CB /* AppDelegate.swift */; };
+		AB6AC3C21E9680AE00F735CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6AC3C11E9680AE00F735CB /* ViewController.swift */; };
+		AB6AC3C41E9680AE00F735CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB6AC3C31E9680AE00F735CB /* Assets.xcassets */; };
+		AB6AC3C71E9680AE00F735CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB6AC3C51E9680AE00F735CB /* Main.storyboard */; };
+		AB6AC3CD1E96819C00F735CB /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6AC3CC1E96819C00F735CB /* AppSettings.swift */; };
+		AB76415C1E97CD57007279BE /* SupportedSerializableTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB76415A1E97CD54007279BE /* SupportedSerializableTypeTests.swift */; };
+		B057D67654FF5F791A3E93A6 /* Pods_PersistentStorageSerializable_MacExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B107F7FEBC35A8A1C3631674 /* Pods_PersistentStorageSerializable_MacExample.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		607FACE61AFB9204008FA782 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
-			remoteInfo = PersistentStorageSerializable;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		607FACD01AFB9204008FA782 /* PersistentStorageSerializable_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersistentStorageSerializable_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		095426B6186FB283A8442B6E /* Pods_PersistentStorageSerializable_iOSExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PersistentStorageSerializable_iOSExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1430E68C73DA958AEE435B2B /* Pods-PersistentStorageSerializable_iOSExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersistentStorageSerializable_iOSExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PersistentStorageSerializable_iOSExample/Pods-PersistentStorageSerializable_iOSExample.debug.xcconfig"; sourceTree = "<group>"; };
+		2588AA89C5187E3CEA89DD6E /* Pods-PersistentStorageSerializable_iOSExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersistentStorageSerializable_iOSExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-PersistentStorageSerializable_iOSExample/Pods-PersistentStorageSerializable_iOSExample.release.xcconfig"; sourceTree = "<group>"; };
+		410ED040FF5FC9E233E71DA9 /* Pods-PersistentStorageSerializable_MacExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersistentStorageSerializable_MacExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PersistentStorageSerializable_MacExample/Pods-PersistentStorageSerializable_MacExample.debug.xcconfig"; sourceTree = "<group>"; };
+		607FACD01AFB9204008FA782 /* PersistentStorageSerializable_iOSExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersistentStorageSerializable_iOSExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,16 +41,27 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* PersistentStorageSerializable_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersistentStorageSerializable_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		6C1240DEA24D615B61502A9B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		77A4C7A9C48761BFB96E9009 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		A638EECE850A5B1C2CD1A31E /* Pods-PersistentStorageSerializable_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersistentStorageSerializable_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PersistentStorageSerializable_Example/Pods-PersistentStorageSerializable_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* PersistentStorageSerializableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStorageSerializableTests.swift; sourceTree = "<group>"; };
+		6C1240DEA24D615B61502A9B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		77A4C7A9C48761BFB96E9009 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		AB2E65E81E97E506009A8531 /* Car.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Car.plist; sourceTree = "<group>"; };
+		AB2E65EA1E98C6E2009A8531 /* ExamplesOfUsage.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ExamplesOfUsage.playground; sourceTree = "<group>"; };
+		AB6AC3AD1E950C5E00F735CB /* PersistentStorageMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentStorageMock.swift; sourceTree = "<group>"; };
+		AB6AC3B51E95513E00F735CB /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		AB6AC3BD1E9680AE00F735CB /* PersistentStorageSerializable_MacExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersistentStorageSerializable_MacExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB6AC3BF1E9680AE00F735CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AB6AC3C11E9680AE00F735CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AB6AC3C31E9680AE00F735CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AB6AC3C61E9680AE00F735CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AB6AC3C81E9680AE00F735CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB6AC3CC1E96819C00F735CB /* AppSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		AB76415A1E97CD54007279BE /* SupportedSerializableTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportedSerializableTypeTests.swift; sourceTree = "<group>"; };
+		B107F7FEBC35A8A1C3631674 /* Pods_PersistentStorageSerializable_MacExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PersistentStorageSerializable_MacExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F0D1E550D38F1ACE0CFCF6 /* Pods_PersistentStorageSerializable_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PersistentStorageSerializable_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F7B87E59D17DF5674E4175 /* Pods-PersistentStorageSerializable_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersistentStorageSerializable_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PersistentStorageSerializable_Tests/Pods-PersistentStorageSerializable_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D61EE2F47F5FCAFA282DF7DD /* Pods-PersistentStorageSerializable_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersistentStorageSerializable_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PersistentStorageSerializable_Tests/Pods-PersistentStorageSerializable_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		DDAF776488859913631134E6 /* PersistentStorageSerializable.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = PersistentStorageSerializable.podspec; path = ../PersistentStorageSerializable.podspec; sourceTree = "<group>"; };
-		EDD1FD87DE55419C4E017214 /* Pods_PersistentStorageSerializable_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PersistentStorageSerializable_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8EF4381342504A5CC452184 /* Pods-PersistentStorageSerializable_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersistentStorageSerializable_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PersistentStorageSerializable_Example/Pods-PersistentStorageSerializable_Example.release.xcconfig"; sourceTree = "<group>"; };
+		DDAF776488859913631134E6 /* PersistentStorageSerializable.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PersistentStorageSerializable.podspec; path = ../PersistentStorageSerializable.podspec; sourceTree = "<group>"; };
+		E1CCB00B943B4FE159A27022 /* Pods-PersistentStorageSerializable_MacExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersistentStorageSerializable_MacExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-PersistentStorageSerializable_MacExample/Pods-PersistentStorageSerializable_MacExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF3A98CAC234010A627E2640 /* Pods_PersistentStorageSerializable_Example.framework in Frameworks */,
+				80E924A82C6F4D136EF6DAFB /* Pods_PersistentStorageSerializable_iOSExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,14 +81,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AB6AC3BA1E9680AE00F735CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B057D67654FF5F791A3E93A6 /* Pods_PersistentStorageSerializable_MacExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				AB2E65EA1E98C6E2009A8531 /* ExamplesOfUsage.playground */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
-				607FACD21AFB9204008FA782 /* Example for PersistentStorageSerializable */,
+				607FACD21AFB9204008FA782 /* iOS Example for PersistentStorageSerializable */,
+				AB6AC3BE1E9680AE00F735CB /* macOS Example for PersistentStorageSerializable */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				D03860B7B98A1F763B5BB4CC /* Pods */,
@@ -84,23 +109,25 @@
 		607FACD11AFB9204008FA782 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD01AFB9204008FA782 /* PersistentStorageSerializable_Example.app */,
+				607FACD01AFB9204008FA782 /* PersistentStorageSerializable_iOSExample.app */,
 				607FACE51AFB9204008FA782 /* PersistentStorageSerializable_Tests.xctest */,
+				AB6AC3BD1E9680AE00F735CB /* PersistentStorageSerializable_MacExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		607FACD21AFB9204008FA782 /* Example for PersistentStorageSerializable */ = {
+		607FACD21AFB9204008FA782 /* iOS Example for PersistentStorageSerializable */ = {
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				AB6AC3B51E95513E00F735CB /* Settings.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
-			name = "Example for PersistentStorageSerializable";
+			name = "iOS Example for PersistentStorageSerializable";
 			path = PersistentStorageSerializable;
 			sourceTree = "<group>";
 		};
@@ -115,7 +142,10 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				607FACEB1AFB9204008FA782 /* PersistentStorageSerializableTests.swift */,
+				AB76415A1E97CD54007279BE /* SupportedSerializableTypeTests.swift */,
+				AB6AC3AD1E950C5E00F735CB /* PersistentStorageMock.swift */,
+				AB2E65E81E97E506009A8531 /* Car.plist */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -142,19 +172,36 @@
 		9A2B6143D980D7AC4AA0886D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EDD1FD87DE55419C4E017214 /* Pods_PersistentStorageSerializable_Example.framework */,
 				C6F0D1E550D38F1ACE0CFCF6 /* Pods_PersistentStorageSerializable_Tests.framework */,
+				B107F7FEBC35A8A1C3631674 /* Pods_PersistentStorageSerializable_MacExample.framework */,
+				095426B6186FB283A8442B6E /* Pods_PersistentStorageSerializable_iOSExample.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB6AC3BE1E9680AE00F735CB /* macOS Example for PersistentStorageSerializable */ = {
+			isa = PBXGroup;
+			children = (
+				AB6AC3BF1E9680AE00F735CB /* AppDelegate.swift */,
+				AB6AC3C11E9680AE00F735CB /* ViewController.swift */,
+				AB6AC3CC1E96819C00F735CB /* AppSettings.swift */,
+				AB6AC3C31E9680AE00F735CB /* Assets.xcassets */,
+				AB6AC3C51E9680AE00F735CB /* Main.storyboard */,
+				AB6AC3C81E9680AE00F735CB /* Info.plist */,
+			);
+			name = "macOS Example for PersistentStorageSerializable";
+			path = PersistentStorageSerializable_MacExample;
 			sourceTree = "<group>";
 		};
 		D03860B7B98A1F763B5BB4CC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A638EECE850A5B1C2CD1A31E /* Pods-PersistentStorageSerializable_Example.debug.xcconfig */,
-				F8EF4381342504A5CC452184 /* Pods-PersistentStorageSerializable_Example.release.xcconfig */,
 				D61EE2F47F5FCAFA282DF7DD /* Pods-PersistentStorageSerializable_Tests.debug.xcconfig */,
 				D0F7B87E59D17DF5674E4175 /* Pods-PersistentStorageSerializable_Tests.release.xcconfig */,
+				410ED040FF5FC9E233E71DA9 /* Pods-PersistentStorageSerializable_MacExample.debug.xcconfig */,
+				E1CCB00B943B4FE159A27022 /* Pods-PersistentStorageSerializable_MacExample.release.xcconfig */,
+				1430E68C73DA958AEE435B2B /* Pods-PersistentStorageSerializable_iOSExample.debug.xcconfig */,
+				2588AA89C5187E3CEA89DD6E /* Pods-PersistentStorageSerializable_iOSExample.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -162,9 +209,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		607FACCF1AFB9204008FA782 /* PersistentStorageSerializable_Example */ = {
+		607FACCF1AFB9204008FA782 /* PersistentStorageSerializable_iOSExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "PersistentStorageSerializable_Example" */;
+			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "PersistentStorageSerializable_iOSExample" */;
 			buildPhases = (
 				66755897DE9E279750DF07F9 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
@@ -177,9 +224,9 @@
 			);
 			dependencies = (
 			);
-			name = PersistentStorageSerializable_Example;
+			name = PersistentStorageSerializable_iOSExample;
 			productName = PersistentStorageSerializable;
-			productReference = 607FACD01AFB9204008FA782 /* PersistentStorageSerializable_Example.app */;
+			productReference = 607FACD01AFB9204008FA782 /* PersistentStorageSerializable_iOSExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 		607FACE41AFB9204008FA782 /* PersistentStorageSerializable_Tests */ = {
@@ -196,12 +243,31 @@
 			buildRules = (
 			);
 			dependencies = (
-				607FACE71AFB9204008FA782 /* PBXTargetDependency */,
 			);
 			name = PersistentStorageSerializable_Tests;
 			productName = Tests;
 			productReference = 607FACE51AFB9204008FA782 /* PersistentStorageSerializable_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AB6AC3BC1E9680AE00F735CB /* PersistentStorageSerializable_MacExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB6AC3CB1E9680AE00F735CB /* Build configuration list for PBXNativeTarget "PersistentStorageSerializable_MacExample" */;
+			buildPhases = (
+				83656AD5AD449BE38007FB5D /* [CP] Check Pods Manifest.lock */,
+				AB6AC3B91E9680AE00F735CB /* Sources */,
+				AB6AC3BA1E9680AE00F735CB /* Frameworks */,
+				AB6AC3BB1E9680AE00F735CB /* Resources */,
+				BB48EDF876C9F1A254792873 /* [CP] Embed Pods Frameworks */,
+				69E40D21BFAF5A6983432BE8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PersistentStorageSerializable_MacExample;
+			productName = PersistentStorageSerializable_MacExample;
+			productReference = AB6AC3BD1E9680AE00F735CB /* PersistentStorageSerializable_MacExample.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -209,8 +275,8 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0820;
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
@@ -220,7 +286,10 @@
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0820;
-						TestTargetID = 607FACCF1AFB9204008FA782;
+					};
+					AB6AC3BC1E9680AE00F735CB = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -237,7 +306,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				607FACCF1AFB9204008FA782 /* PersistentStorageSerializable_Example */,
+				607FACCF1AFB9204008FA782 /* PersistentStorageSerializable_iOSExample */,
+				AB6AC3BC1E9680AE00F735CB /* PersistentStorageSerializable_MacExample */,
 				607FACE41AFB9204008FA782 /* PersistentStorageSerializable_Tests */,
 			);
 		};
@@ -258,6 +328,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB2E65E91E97E506009A8531 /* Car.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB6AC3BB1E9680AE00F735CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB6AC3C41E9680AE00F735CB /* Assets.xcassets in Resources */,
+				AB6AC3C71E9680AE00F735CB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +356,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PersistentStorageSerializable_Example/Pods-PersistentStorageSerializable_Example-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PersistentStorageSerializable_iOSExample/Pods-PersistentStorageSerializable_iOSExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		27432223C0DD7682AC675BDF /* [CP] Copy Pods Resources */ = {
@@ -291,7 +371,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PersistentStorageSerializable_Example/Pods-PersistentStorageSerializable_Example-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PersistentStorageSerializable_iOSExample/Pods-PersistentStorageSerializable_iOSExample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		33157687998EEACBC2651DA7 /* [CP] Embed Pods Frameworks */ = {
@@ -339,6 +419,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		69E40D21BFAF5A6983432BE8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PersistentStorageSerializable_MacExample/Pods-PersistentStorageSerializable_MacExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		82A9B6DE26A7AA265E46262D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -354,6 +449,36 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		83656AD5AD449BE38007FB5D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BB48EDF876C9F1A254792873 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PersistentStorageSerializable_MacExample/Pods-PersistentStorageSerializable_MacExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -361,6 +486,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB6AC3B61E95513E00F735CB /* Settings.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
@@ -370,19 +496,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				AB6AC3AF1E950D5300F735CB /* PersistentStorageMock.swift in Sources */,
+				607FACEC1AFB9204008FA782 /* PersistentStorageSerializableTests.swift in Sources */,
+				AB76415C1E97CD57007279BE /* SupportedSerializableTypeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB6AC3B91E9680AE00F735CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB6AC3CD1E96819C00F735CB /* AppSettings.swift in Sources */,
+				AB6AC3C21E9680AE00F735CB /* ViewController.swift in Sources */,
+				AB6AC3C01E9680AE00F735CB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		607FACE71AFB9204008FA782 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 607FACCF1AFB9204008FA782 /* PersistentStorageSerializable_Example */;
-			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
@@ -399,6 +529,14 @@
 				607FACDF1AFB9204008FA782 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		AB6AC3C51E9680AE00F735CB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB6AC3C61E9680AE00F735CB /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -443,7 +581,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -483,7 +622,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -493,7 +633,7 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A638EECE850A5B1C2CD1A31E /* Pods-PersistentStorageSerializable_Example.debug.xcconfig */;
+			baseConfigurationReference = 1430E68C73DA958AEE435B2B /* Pods-PersistentStorageSerializable_iOSExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PersistentStorageSerializable/Info.plist;
@@ -507,7 +647,7 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8EF4381342504A5CC452184 /* Pods-PersistentStorageSerializable_Example.release.xcconfig */;
+			baseConfigurationReference = 2588AA89C5187E3CEA89DD6E /* Pods-PersistentStorageSerializable_iOSExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PersistentStorageSerializable/Info.plist;
@@ -523,10 +663,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D61EE2F47F5FCAFA282DF7DD /* Pods-PersistentStorageSerializable_Tests.debug.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -543,14 +679,54 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D0F7B87E59D17DF5674E4175 /* Pods-PersistentStorageSerializable_Tests.release.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		AB6AC3C91E9680AE00F735CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 410ED040FF5FC9E233E71DA9 /* Pods-PersistentStorageSerializable_MacExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = PersistentStorageSerializable_MacExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.PersistentStorageSerializable-MacExample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AB6AC3CA1E9680AE00F735CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1CCB00B943B4FE159A27022 /* Pods-PersistentStorageSerializable_MacExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = PersistentStorageSerializable_MacExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.PersistentStorageSerializable-MacExample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -567,7 +743,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "PersistentStorageSerializable_Example" */ = {
+		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "PersistentStorageSerializable_iOSExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACF01AFB9204008FA782 /* Debug */,
@@ -581,6 +757,15 @@
 			buildConfigurations = (
 				607FACF31AFB9204008FA782 /* Debug */,
 				607FACF41AFB9204008FA782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB6AC3CB1E9680AE00F735CB /* Build configuration list for PBXNativeTarget "PersistentStorageSerializable_MacExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB6AC3C91E9680AE00F735CB /* Debug */,
+				AB6AC3CA1E9680AE00F735CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

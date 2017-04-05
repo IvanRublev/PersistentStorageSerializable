@@ -8,35 +8,25 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PersistentStorageSerializable'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of PersistentStorageSerializable.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.version          = '1.1.0'
+  s.summary          = 'Swift library that makes easier to serialize the user\'s preferences class/struct with system User Defaults or Property List file on disk.'
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+    Number of protocols from this pod helps to serialize swift class or structure to persistent storage like User Defaults or Keychain. The class/structure must contain properties of simple data type only. These types are: Data, String, Int, Float, Double, Bool, URL, Date, Array, or Dictionary<String, *>.
+    Adopt the PersistentStorageSerializable protocol from your struct. Then call pullFromUserDefaults() or  pushToUserDefaults() on instance of your struct.
                        DESC
 
   s.homepage         = 'https://github.com/IvanRublev/PersistentStorageSerializable'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'IvanRublev' => 'ivan@ivanrublev.me' }
   s.source           = { :git => 'https://github.com/IvanRublev/PersistentStorageSerializable.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
+  s.osx.deployment_target = '10.11'
 
   s.source_files = 'PersistentStorageSerializable/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'PersistentStorageSerializable' => ['PersistentStorageSerializable/Assets/*.png']
-  # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = 'Foundation'
+  s.dependency 'Reflection', '~> 0.14'
+
 end
