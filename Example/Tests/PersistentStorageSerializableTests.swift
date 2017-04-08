@@ -43,7 +43,7 @@ final class Vehicle: PersistentStorageSerializable {
     
     // MARK: Adopt PersistentStorageSerializable
     var persistentStorage: PersistentStorage!
-    var persistentStorageKeyPrefix: String!
+    var persistentStorageKeyPrefix: String! = "Car"
 }
 
 final class Location: NSObject, PersistentStorageSerializable {
@@ -85,7 +85,7 @@ class PersistableTypeTests: QuickSpec {
             context("initialized from storage") {
                 var car: Vehicle!
                 it("successfully initialized.") {
-                    expect { car = try Vehicle(from: memoryStorage, keyPrefix: "Car") }.toNot(throwError())
+                    expect { car = try Vehicle(from: memoryStorage) }.toNot(throwError())
                     expect(car.doors) == persistedDoors
                 }
                 context("modified and persisted to storage") {

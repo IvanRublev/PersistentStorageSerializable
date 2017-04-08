@@ -26,13 +26,7 @@ public protocol PersistentStorageSerializable {
     /// Values set in default initializer are registered as defaults with persistent storage.
     init()
     
-    /// Initializer calls default initializer then pulls properties values from persistent storage.
-    ///
-    /// - Parameters:
-    ///   - persistentStorage: Persistent storage to serialize with.
-    ///   - keyPrefix: Prefix for properties values key in persistent storage.
-    /// - Throws: Error of pulling from storage.
-    init(from persistentStorage: PersistentStorage, keyPrefix: String) throws
+    init(from persistentStorage: PersistentStorage, keyPrefix: String?) throws
     
     // MARK: Optional
     
@@ -45,10 +39,18 @@ public protocol PersistentStorageSerializable {
 }
 
 public extension PersistentStorageSerializable {
-    init(from persistentStorage: PersistentStorage, keyPrefix: String) throws {
+    /// Initializer calls default initializer then pulls properties values from persistent storage.
+    ///
+    /// - Parameters:
+    ///   - persistentStorage: Persistent storage to serialize with.
+    ///   - keyPrefix: Prefix for properties values key in persistent storage. If is not specified, then default value must be set in adopter type definition, or the `persistentStorageKey(for:)` function must be overloaded.
+    /// - Throws: Error of pulling from storage.
+    init(from persistentStorage: PersistentStorage, keyPrefix: String? = nil) throws {
         self.init()
         self.persistentStorage = persistentStorage
-        self.persistentStorageKeyPrefix = keyPrefix
+        if let keyPrefix = keyPrefix {
+            self.persistentStorageKeyPrefix = keyPrefix
+        }
         try pullFromPersistentStorage()
     }
     

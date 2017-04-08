@@ -44,12 +44,12 @@ struct UserPreferences: PersistentStorageSerializable {
     
     // MARK: Adopt PersistentStorageSerializable
     var persistentStorage: PersistentStorage!
-    var persistentStorageKeyPrefix: String!
+    var persistentStorageKeyPrefix: String! = "UserPreferences"
 }
 
 memoryStorage.dictionary
 
-var preferences = try! UserPreferences(from: memoryStorage, keyPrefix: "UserPreferences")
+var preferences = try! UserPreferences(from: memoryStorage)
 
 preferences.myString = "Greetings"
 preferences.myBool = true
