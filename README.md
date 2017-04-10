@@ -2,15 +2,17 @@
 
 [![CI Status](http://img.shields.io/travis/IvanRublev/PersistentStorageSerializable.svg?style=flat)](https://travis-ci.org/IvanRublev/PersistentStorageSerializable) [![Version](https://img.shields.io/cocoapods/v/PersistentStorageSerializable.svg?style=flat)](http://cocoapods.org/pods/PersistentStorageSerializable) [![Swift](https://img.shields.io/badge/Swift-3.1-orange.svg?style=flat)](https://img.shields.io/badge/Swift-3.1-orange.svg?style=flat) [![License](https://img.shields.io/cocoapods/l/PersistentStorageSerializable.svg?style=flat)](http://cocoapods.org/pods/PersistentStorageSerializable)
 
-This Swift library makes easier to serialize the user's preferences (app's settings) with system User Defaults or Property List file on disk. Simply by making class / struct / NSObject descendant type to adopt `PersistentStorageSerializable` protocol.
+`PersistentStorageSerializable` is a protocol for automatic serialization and deserialization of Swift class, struct or NSObject descendant object from and into User Defaults or Property List file.
 
-The limit is that serializable type properties must be of property list object types (String, Data, Date, Int, UInt, Float, Double, Bool, Array or Dictionary of above). And URL in case of User Defaults. If you want to store any other type of object, you should typically archive it to create an instance of NSData.
+The adipting type properties must be of property list types (String, Data, Date, Int, UInt, Float, Double, Bool, URL, Array or Dictionary of above). If you want to store any other type of object, you should typically archive it to create an instance of NSData.
 
-Serialization functions of the protocol traverses the type instance and get/set properties values automatically via [Reflection](https://github.com/Zewo/Reflection) library. To set NSObject class descendant type properties KVC is used.
+The `PersistentStorageStializable` protocol provides default implementations of `init(from:)` initializer and `persist()` function. Library defines two classes of `PesistentStorage` protocol: `UserDefaultsStorage` and `PlistStorage`. One of those objects is passed as argument in call to `init(from:)` initializer to specify which storage to use for serialization/deserialization.
+
+Functions of the `PersistentStorageStializable` protocol traverses the adopting type object and gets/sets properties values via [Reflection](https://github.com/Zewo/Reflection) library. The NSObject class descendant properties are get/set via KVC.
 
 ## How to use
 
-Serialize a type properties value with User Defaults as following:
+Serialize/Deserialize a struct with User Defaults by using `UserDefaultStorage` as shown below:
 
 ```swift
 struct Settings: PersistentStorageSerializable {
@@ -21,11 +23,11 @@ struct Settings: PersistentStorageSerializable {
 
     // MARK: Adopt PersistentStorageSerializable
     var persistentStorage: PersistentStorage!
-    var persistentStorageKeyPrefix: String!
+    var persistentStorageKeyPrefix: String! = "Settings"
 }
 
 // Init from User Defaults
-let mySettings = Settings(from: UserDefaultsStorage.standard, keyPrefix: "Settings")
+let mySettings = Settings(from: UserDefaultsStorage.standard)
 
 mySettings.flag = true
 
@@ -33,13 +35,13 @@ mySettings.flag = true
 mySettings.persist()
 ```
 
-Or serialize with Plist file using `PlistStorage` class:
+To serialize data with Plist file use `PlistStorage` class:
 
 ```swift
 // Init from plist
 let plistUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last!.appendingPathComponent("storage.plist")
 
-let settingsOnDisk = try! Settings(from: PlistStorage(at: plistUrl), keyPrefix: "Settings")
+let settingsOnDisk = try! Settings(from: PlistStorage(at: plistUrl))
 
 mySettings.flag = true
 
@@ -47,11 +49,9 @@ mySettings.flag = true
 try! mySettings.persist()
 ```
 
-It's possible to make custom storage class by adopting `PersistentStorage` protocol.
-
 ### Reading data stored by the previous version of the app
 
-When you have some data persisted in User Defaults by the previous version of the app and want PersistentStorageSerializable library to read that data into your structure you need to provide a mapping between properties names and User Defaults keys.
+When you have some data persisted in User Defaults by the previous version of the app and want to read that data into a structure you need to provide a mapping between properties names and User Defaults keys by overloading the `persistentStorageKey(for:)` function.
 
 Say we have following data persisted in User Defaults:
 
@@ -60,7 +60,7 @@ UserDefaults.standard.set("Superhero", forKey: "oldGoogTitle")
 UserDefaults.standard.set(true, forKey: "well.persisted.option")
 ```
 
-We want those to be serialized with the `ApplicationConfiguration` class.
+We want those to be serialized with the object of `ApplicationConfiguration` class.
 
 ```swift
 final class ApplicationConfiguration: PersistentStorageSerializable {
@@ -72,7 +72,6 @@ final class ApplicationConfiguration: PersistentStorageSerializable {
     var persistentStorageKeyPrefix: String!
 }
 
-
 // Provide key mapping by overloading `persistentStorageKey(for:)` function.
 extension ApplicationConfiguration {
     func persistentStorageKey(for propertyName: String) -> String {
@@ -82,7 +81,7 @@ extension ApplicationConfiguration {
 }
 
 // Now we can load data persisted in the storage.
-let configuration = try! ApplicationConfiguration(from: UserDefaultsStorage.standard, keyPrefix: "")
+let configuration = try! ApplicationConfiguration(from: UserDefaultsStorage.standard)
 
 print(configuration.title) // prints Superhero
 print(configuration.showIntro) // prints true
@@ -90,7 +89,7 @@ print(configuration.showIntro) // prints true
 
 ## Example
 
-To run example projects for iOS/macOS, open console and run `pod try PersistentStorageSerializable`.
+To run example projects for iOS/macOS, run `pod try PersistentStorageSerializable` in terminal.
 
 ## Requirements
 
