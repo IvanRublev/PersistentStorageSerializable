@@ -10,7 +10,7 @@ import Foundation
 import Reflection
 
 public enum PersistentStorageSerializableError: Error {
-    case UnsupportedValueTypeForKey(String)
+    case UnsupportedValueTypeForKey(String, PersistentStorageSerializableTypeError)
     case FailedToGetIntancePropertyValueForName(String)
 }
 
@@ -74,8 +74,11 @@ public extension PersistentStorageSerializable {
         try registerInstancePropertiesValueAsDefaultsWithStorageOnce()
         try eachSelfProperty { (key, value) in
             let storageKey = self.persistentStorageKey(for: key)
-            if Self.serializable(value: value) == false {
-                throw PersistentStorageSerializableError.UnsupportedValueTypeForKey(key)
+            do {
+                try Self.serializable(value: value)
+            }
+            catch let error as PersistentStorageSerializableTypeError {
+                throw PersistentStorageSerializableError.UnsupportedValueTypeForKey(key, error)
             }
             try self.persistentStorage.set(value: value, for: storageKey)
         }
@@ -149,54 +152,3 @@ extension PersistentStorageSerializable {
     }
 }
 
-// MARK: - Check for serializable type
-protocol OptionalProtocol {}
-extension Optional: OptionalProtocol {}
-
-protocol ArrayProtocol {}
-extension Array: ArrayProtocol {}
-
-protocol DictionaryProtocol {}
-extension Dictionary: DictionaryProtocol {}
-
-extension PersistentStorageSerializable {
-    static func isSerializableType(value: Any) -> Bool {
-        return value is Data ||
-            value is String ||
-            value is UInt ||
-            value is Int ||
-            value is Float ||
-            value is Double ||
-            value is Bool ||
-            value is URL ||
-            value is Date
-    }
-    
-    static func serializable(value: Any) -> Bool {
-        if value is OptionalProtocol { // we do not support optionals
-            return false
-        }
-        if isSerializableType(value: value) {
-            return true
-        } // else not a simple type
-        
-        func areElementsOfSerializableType<T: Sequence>(for sequence: T) -> Bool {
-            for element in sequence {
-                if (serializable(value: element)) == false {
-                    return false
-                }
-            }
-            return true
-        }
-        
-        if value is ArrayProtocol, let abstractArray = value as? Array<Any> {
-            return areElementsOfSerializableType(for: abstractArray)
-        }
-        else if value is DictionaryProtocol, let abstractDictionary = value as? Dictionary<String, Any> {
-            return areElementsOfSerializableType(for: abstractDictionary.values)
-        }
-        // else is not of required collection type
-        return false
-    }
-    
-}

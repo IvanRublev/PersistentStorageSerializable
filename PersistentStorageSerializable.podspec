@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PersistentStorageSerializable'
-  s.version          = '1.1.1'
+  s.version          = '1.1.2'
   s.summary          = 'Swift library that makes easier to serialize the user\'s preferences class/struct with system User Defaults or Property List file on disk.'
 
   s.description      = <<-DESC

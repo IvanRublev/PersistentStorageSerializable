@@ -125,6 +125,8 @@
 		AB7641581E9798B5007279BE /* PropertiesIteration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7641571E9798B5007279BE /* PropertiesIteration.swift */; };
 		AB7641591E9798B5007279BE /* PropertiesIteration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7641571E9798B5007279BE /* PropertiesIteration.swift */; };
 		ABD62B3892A67B671316A6D145AF6761 /* UnsafePointer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F08D19A4E34CF4C3804349437273B90 /* UnsafePointer+Extensions.swift */; };
+		ABEACAEF1E9B6E4D004C1C2F /* SupportedSerializableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEACAEE1E9B6E4D004C1C2F /* SupportedSerializableType.swift */; };
+		ABEACAF01E9B6E4D004C1C2F /* SupportedSerializableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEACAEE1E9B6E4D004C1C2F /* SupportedSerializableType.swift */; };
 		AC0B24EF198E3BEDFCC9F25D7B8EEDAB /* NMBObjCMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41415B1CBC6148AB3EAE70E253CDF09E /* NMBObjCMatcher.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		AC29CC89E22273BF0D0DC2C841B7524C /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C9115DBFFBCA4CBC7B5D325CDFA974 /* Async.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		AC5137B44BDB6C4C38C6450791C1BAF4 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51A6A4AD26C84606E8A06CEF80604CC /* Filter.swift */; };
@@ -402,6 +404,7 @@
 		AB2E65E51E97DB35009A8531 /* PlistStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistStorage.swift; sourceTree = "<group>"; };
 		AB379B8B8259CE097D226FB13A1FC648 /* PersistentStorageSerializable-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "PersistentStorageSerializable-iOS.xcconfig"; path = "../PersistentStorageSerializable-iOS/PersistentStorageSerializable-iOS.xcconfig"; sourceTree = "<group>"; };
 		AB7641571E9798B5007279BE /* PropertiesIteration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertiesIteration.swift; sourceTree = "<group>"; };
+		ABEACAEE1E9B6E4D004C1C2F /* SupportedSerializableType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportedSerializableType.swift; sourceTree = "<group>"; };
 		AC46343C8BF32068677D41A1DC13B7EA /* SwiftTryCatch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SwiftTryCatch.h; sourceTree = "<group>"; };
 		AC711F896F1F753CD40D0336E1891051 /* NominalType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NominalType.swift; path = Sources/Reflection/NominalType.swift; sourceTree = "<group>"; };
 		AD76B886530DC003364EE0F566036318 /* Any+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Any+Extensions.swift"; path = "Sources/Reflection/Any+Extensions.swift"; sourceTree = "<group>"; };
@@ -666,6 +669,7 @@
 			children = (
 				E12E2760F92F1A2C4D26629773BE116E /* PersistentStorage.swift */,
 				F8E892409CB344988B711253F95DF9A6 /* PersistentStorageSerializable.swift */,
+				ABEACAEE1E9B6E4D004C1C2F /* SupportedSerializableType.swift */,
 				AB7641571E9798B5007279BE /* PropertiesIteration.swift */,
 				AC46343C8BF32068677D41A1DC13B7EA /* SwiftTryCatch.h */,
 				B17CA6902411F751101E932D315A01A3 /* SwiftTryCatch.m */,
@@ -1372,6 +1376,7 @@
 				D1F0D71DC0ED03185D640B1D3EEA3150 /* SwiftTryCatch.m in Sources */,
 				AB2E65E71E97DB35009A8531 /* PlistStorage.swift in Sources */,
 				970E9F902FFC919D23F51D8861E05EBC /* UserDefaultsStorage.swift in Sources */,
+				ABEACAF01E9B6E4D004C1C2F /* SupportedSerializableType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1402,6 +1407,7 @@
 				88D2CD8353F07F320B24053F75B0AA8A /* SwiftTryCatch.m in Sources */,
 				AB2E65E61E97DB35009A8531 /* PlistStorage.swift in Sources */,
 				E0534D41B876E82FD0472460B8D51179 /* UserDefaultsStorage.swift in Sources */,
+				ABEACAEF1E9B6E4D004C1C2F /* SupportedSerializableType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -307,7 +307,7 @@ class UnpersistableTypeTests: QuickSpec {
             context("when pushed to storage") {
                 it("throws an exception with street property because Street type is not a serializable type") {
                     let address = Address()
-                    expect { try address.pushToPersistentStorage() }.to(throwError(PersistentStorageSerializableError.UnsupportedValueTypeForKey("street")))
+                    expect { try address.pushToPersistentStorage() }.to(throwError(PersistentStorageSerializableError.UnsupportedValueTypeForKey("street", PersistentStorageSerializableTypeError.CollectionElement(.NonPlistType))))
                 }
             }
         }

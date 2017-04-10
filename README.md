@@ -2,13 +2,13 @@
 
 [![CI Status](http://img.shields.io/travis/IvanRublev/PersistentStorageSerializable.svg?style=flat)](https://travis-ci.org/IvanRublev/PersistentStorageSerializable) [![Version](https://img.shields.io/cocoapods/v/PersistentStorageSerializable.svg?style=flat)](http://cocoapods.org/pods/PersistentStorageSerializable) [![Swift](https://img.shields.io/badge/Swift-3.1-orange.svg?style=flat)](https://img.shields.io/badge/Swift-3.1-orange.svg?style=flat) [![License](https://img.shields.io/cocoapods/l/PersistentStorageSerializable.svg?style=flat)](http://cocoapods.org/pods/PersistentStorageSerializable)
 
-`PersistentStorageSerializable` is a protocol for automatic serialization and deserialization of Swift class, struct or NSObject descendant object from and into User Defaults or Property List file.
+`PersistentStorageSerializable` is a protocol for automatic serialization and deserialization of Swift class, struct or NSObject descendant object into and from User Defaults or Property List file.
 
-The adipting type properties must be of property list types (String, Data, Date, Int, UInt, Float, Double, Bool, URL, Array or Dictionary of above). If you want to store any other type of object, you should typically archive it to create an instance of NSData.
+The adopting type properties must be of property list type (String, Data, Date, Int, UInt, Float, Double, Bool, Array or Dictionary of above). If you want to store any other type of object, you should typically archive it to create an instance of Data. The URL properties can be stored in User Defaults storage but not in Plist storage. In the last case, you have to archive it to/from Data.
 
-The `PersistentStorageStializable` protocol provides default implementations of `init(from:)` initializer and `persist()` function. Library defines two classes of `PesistentStorage` protocol: `UserDefaultsStorage` and `PlistStorage`. One of those objects is passed as argument in call to `init(from:)` initializer to specify which storage to use for serialization/deserialization.
+The `PersistentStorageSerializable` protocol provides default implementations of `init(from:)` initializer and `persist()` function. The library defines two classes of `PesistentStorage` protocol: `UserDefaultsStorage` and `PlistStorage`. Object of one of those types is passed as the argument when calling to `init(from:)` initializer to specify which storage to be used for serialization/deserialization.
 
-Functions of the `PersistentStorageStializable` protocol traverses the adopting type object and gets/sets properties values via [Reflection](https://github.com/Zewo/Reflection) library. The NSObject class descendant properties are get/set via KVC.
+Functions of the `PersistentStorageSerializable` protocol traverses the adopting type object and gets/sets it's properties values via [Reflection](https://github.com/Zewo/Reflection) library. The NSObject class descendant properties values are get/set via KVC.
 
 ## How to use
 
@@ -89,11 +89,11 @@ print(configuration.showIntro) // prints true
 
 ## Example
 
-To run example projects for iOS/macOS, run `pod try PersistentStorageSerializable` in terminal.
+To run example projects for iOS/macOS, run `pod try PersistentStorageSerializable` in the terminal.
 
 ## Requirements
 
-- XCode 8.3
+- Xcode 8.3
 - Swift 3.1
 
 ## Installation
@@ -108,7 +108,7 @@ and run `pods update` or `pods install`.
 
 ## Author
 
-Copyrigth (c) 2017, IvanRublev, ivan@ivanrublev.me
+Copyright (c) 2017, IvanRublev, ivan@ivanrublev.me
 
 ## License
 
