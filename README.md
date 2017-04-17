@@ -1,6 +1,10 @@
 # PersistentStorageSerializable
 
-[![CI Status](http://img.shields.io/travis/IvanRublev/PersistentStorageSerializable.svg?style=flat)](https://travis-ci.org/IvanRublev/PersistentStorageSerializable) [![Version](https://img.shields.io/cocoapods/v/PersistentStorageSerializable.svg?style=flat)](http://cocoapods.org/pods/PersistentStorageSerializable) [![Swift](https://img.shields.io/badge/Swift-3.1-orange.svg?style=flat)](https://img.shields.io/badge/Swift-3.1-orange.svg?style=flat) [![License](https://img.shields.io/cocoapods/l/PersistentStorageSerializable.svg?style=flat)](http://cocoapods.org/pods/PersistentStorageSerializable)
+[![CI Status](http://img.shields.io/travis/IvanRublev/PersistentStorageSerializable.svg?style=flat)](https://travis-ci.org/IvanRublev/PersistentStorageSerializable)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Version](https://img.shields.io/cocoapods/v/PersistentStorageSerializable.svg?style=flat)](http://cocoapods.org/pods/PersistentStorageSerializable)
+[![Swift](https://img.shields.io/badge/Swift-3.1-orange.svg?style=flat)](https://img.shields.io/badge/Swift-3.1-orange.svg?style=flat)
+[![License](https://img.shields.io/cocoapods/l/PersistentStorageSerializable.svg?style=flat)](http://cocoapods.org/pods/PersistentStorageSerializable)
 
 `PersistentStorageSerializable` is a protocol for automatic serialization and deserialization of Swift class, struct or NSObject descendant object into and from User Defaults or Property List file.
 
@@ -27,12 +31,12 @@ struct Settings: PersistentStorageSerializable {
 }
 
 // Init from User Defaults
-let mySettings = Settings(from: UserDefaultsStorage.standard)
+let mySettings = try! Settings(from: UserDefaultsStorage.standard)
 
 mySettings.flag = true
 
 // Persist into User Defaults
-mySettings.persist()
+try! mySettings.persist()
 ```
 
 To serialize data with Plist file use `PlistStorage` class:
@@ -98,6 +102,8 @@ To run example projects for iOS/macOS, run `pod try PersistentStorageSerializabl
 
 ## Installation
 
+### CocoaPods
+
 PersistentStorageSerializable is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ```ruby
@@ -105,6 +111,16 @@ pod "PersistentStorageSerializable"
 ```
 
 and run `pods update` or `pods install`.
+
+### Carthage
+
+If you use Carthage to manage your dependencies, simply add PersistentStorageSerializable to your Cartfile:
+
+```
+github "IvanRublev/PersistentStorageSerializable"
+```
+
+If you use Carthage to build your dependencies, make sure you have added `PersistentStorageSerializable.framework` and `Reflection.framework` to the "Linked Frameworks and Libraries" section of your target, and have included them in your Carthage framework copying build phase.
 
 ## Author
 
