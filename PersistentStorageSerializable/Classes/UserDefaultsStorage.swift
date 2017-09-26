@@ -36,7 +36,10 @@ open class UserDefaultsStorage {
 
 // MARK: - Adopt PersistentStorage
 extension UserDefaultsStorage: PersistentStorage {
-    open func beginTransaction() throws {}
+    open func beginTransaction() throws {
+        precondition(Thread.isMainThread)
+        let _ = defaults.synchronize()
+    }
     
     open func register(defaultValues: [String : Any]) {
         precondition(Thread.isMainThread)
