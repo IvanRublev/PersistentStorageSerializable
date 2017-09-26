@@ -112,6 +112,8 @@ pod "PersistentStorageSerializable"
 
 and run `pods update` or `pods install`.
 
+> :sparkles: For Xcode 9, Swift 4 and cocoapods installation, please follow the [instruction here](https://github.com/IvanRublev/PersistentStorageSerializable/issues/2#issuecomment-332145439).
+
 ### Carthage
 
 If you use Carthage to manage your dependencies, simply add PersistentStorageSerializable to your Cartfile:
