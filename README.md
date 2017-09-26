@@ -31,7 +31,7 @@ struct Settings: PersistentStorageSerializable {
 }
 
 // Init from User Defaults
-let mySettings = try! Settings(from: UserDefaultsStorage.standard)
+var mySettings = try! Settings(from: UserDefaultsStorage.standard)
 
 mySettings.flag = true
 
@@ -45,7 +45,7 @@ To serialize data with Plist file use `PlistStorage` class:
 // Init from plist
 let plistUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last!.appendingPathComponent("storage.plist")
 
-let settingsOnDisk = try! Settings(from: PlistStorage(at: plistUrl))
+var settingsOnDisk = try! Settings(from: PlistStorage(at: plistUrl))
 
 mySettings.flag = true
 
